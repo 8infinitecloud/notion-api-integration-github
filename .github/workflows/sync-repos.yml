@@ -25,6 +25,6 @@ jobs:
     - name: Run sync
       env:
         NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GB_TOKEN }}
         NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
       run: npm run sync

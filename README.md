@@ -90,7 +90,7 @@ El proyecto incluye un GitHub Action que se ejecuta automáticamente:
 1. Ve a tu repositorio → Settings → Secrets and variables → Actions
 2. Agrega estos secrets:
    - `NOTION_TOKEN`: Tu token de Notion
-   - `GITHUB_TOKEN`: Tu token de GitHub
+   - `GB_TOKEN`: Tu token de GitHub
    - `NOTION_DATABASE_ID`: ID de tu base de datos
 
 #### Ejecución manual:

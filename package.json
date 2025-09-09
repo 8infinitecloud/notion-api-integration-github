@@ -5,6 +5,8 @@
   "main": "sync.js",
   "scripts": {
     "sync": "node sync.js",
+    "sync-repos": "node sync.js",
+    "sync-issues": "node sync-issues-wiki.js",
     "start": "node sync.js"
   },
   "dependencies": {

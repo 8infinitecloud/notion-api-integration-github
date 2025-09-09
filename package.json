@@ -1,0 +1,15 @@
+{
+  "name": "github-notion-sync",
+  "version": "1.0.0",
+  "description": "Sincroniza repositorios de GitHub con base de datos de Notion",
+  "main": "sync.js",
+  "scripts": {
+    "sync": "node sync.js",
+    "start": "node sync.js"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "@octokit/rest": "^20.0.2",
+    "dotenv": "^16.3.1"
+  }
+}

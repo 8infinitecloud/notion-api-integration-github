@@ -37,16 +37,15 @@ class GitHubNotionSync {
         properties: {
           'Name': { title: [{ text: { content: repo.name } }] },
           'Description': { rich_text: [{ text: { content: repo.description } }] },
-          'Language': { select: { name: repo.language } },
-          'Stars': { number: repo.stars },
-          'Forks': { number: repo.forks },
-          'Issues': { number: repo.issues },
-          'Size (KB)': { number: repo.size },
-          'Created': { date: { start: repo.created } },
-          'Updated': { date: { start: repo.updated } },
-          'URL': { url: repo.url },
-          'Private': { checkbox: repo.private },
-          'Topics': { multi_select: repo.topics.map(topic => ({ name: topic })) }
+          'Language': { rich_text: [{ text: { content: repo.language } }] },
+          'Stars': { rich_text: [{ text: { content: repo.stars.toString() } }] },
+          'Forks': { rich_text: [{ text: { content: repo.forks.toString() } }] },
+          'Size (KB)': { rich_text: [{ text: { content: repo.size.toString() } }] },
+          'Created': { rich_text: [{ text: { content: repo.created } }] },
+          'Updated': { rich_text: [{ text: { content: repo.updated } }] },
+          'URL': { rich_text: [{ text: { content: repo.url } }] },
+          'Private': { rich_text: [{ text: { content: repo.private ? 'Yes' : 'No' } }] },
+          'Topics': { rich_text: [{ text: { content: repo.topics.join(', ') } }] }
         }
       });
     }
